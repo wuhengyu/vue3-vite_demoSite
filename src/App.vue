@@ -11,6 +11,10 @@ const showMsg = () => {
   </div>
   <el-button type="primary" @click="showMsg">按钮</el-button>
   <hr />
+  <el-icon :size="36" :color="color">
+    <edit></edit>
+  </el-icon>
+  <hr />
   <router-view></router-view>
 </template>
 

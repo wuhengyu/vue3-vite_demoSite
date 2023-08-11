@@ -9,4 +9,16 @@ for (const i in ElIcons) {
   app.component(i, ElIcons[i])
 }
 
+const store = createStore({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment(state) {
+      state.count++;
+    }
+  }
+});
+
+app.use(store);
 app.use(router).mount('#app')

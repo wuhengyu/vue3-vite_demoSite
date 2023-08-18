@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Layout from '../layout/index.vue'
+import Layout from '@/layout/index.vue'
 import process from 'process';
 
 const routes = [
@@ -19,14 +19,14 @@ const routes = [
     component: Layout,
     children: [
       {
-        path: 'Login',
+        path: 'login',
         name: 'Login',
-        component: () => import('../views/login/index.vue')
+        component: () => import('@/views/login/index.vue')
       },
       {
         path: '404',
         name: 'NotFound',
-        component: () => import('../views/404.vue')
+        component: () => import('@/views/404.vue')
       },
       {
         path: 'personal',
@@ -34,13 +34,13 @@ const routes = [
         meta: {
           requireAuth: true,
         },
-        component: () => import('../views/personal/index.vue'),
+        component: () => import('@/views/personal/index.vue'),
         children: [
           {
             path: 'message',
             name: 'PersonalMessage',
             meta: {
-              component: () => import('../views/personal/message.vue')
+              component: () => import('@/views/personal/message.vue')
             }
           }
         ]
@@ -51,7 +51,7 @@ const routes = [
         meta: {
           requireAuth: true,
         },
-        component: () => import('../views/app/index.vue'),
+        component: () => import('@/views/app/index.vue'),
       }
     ]
   },
@@ -59,7 +59,7 @@ const routes = [
     path: '/:pathMatch(.*)*',
     redirect: '/404',
     name: '404',
-    component: () => import('../views/404.vue')
+    component: () => import('@/views/404.vue')
   }
 ];
 

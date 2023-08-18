@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <header>
-      <page-header></page-header>
+      <page-header />
     </header>
     <main>
       <div v-if="showLeft" class="left">
@@ -15,7 +15,7 @@
 </template>
 <script setup>
 import PageHeader from "./components/PageHeader.vue";
-import PageSidebar from "./components/PageSiderbar.vue";
+import PageSidebar from "./components/PageSidebar.vue";
 const route = useRoute();
 const showLeft = computed(() => {
   const routeName = route.name;
@@ -47,12 +47,12 @@ const showLeft = computed(() => {
       height: 100%;
       background-color: #000;
       color: #fff;
+    }
 
-      > .right {
-        flex: 1;
-        overflow: hidden;
-        background-color: #f5e7f9;
-      }
+    > .right {
+      flex: 1;
+      overflow: hidden;
+      background-color: #f5e7f9;
 
       > .main-body {
         padding: 16px 16px 30px;

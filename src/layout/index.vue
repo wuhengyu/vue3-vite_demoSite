@@ -25,6 +25,7 @@ const showLeft = computed(() => {
 });
 </script>
 
+
 <style lang="scss">
 .page-container {
   display: flex;
@@ -52,7 +53,7 @@ const showLeft = computed(() => {
     > .right {
       flex: 1;
       overflow: hidden;
-      background-color: #f5e7f9;
+      background-color: #f5f7f9;
 
       > .main-body {
         padding: 16px 16px 30px;

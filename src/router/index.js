@@ -3,16 +3,7 @@ import Layout from '@/layout/index.vue'
 import process from 'process';
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: () => import('../views/Home.vue')
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import('../views/About.vue')
-  // }
+
   {
     path: '/',
     name: 'Home',
@@ -40,8 +31,9 @@ const routes = [
             path: 'message',
             name: 'PersonalMessage',
             meta: {
-              component: () => import('@/views/personal/message.vue')
-            }
+              requireAuth: true,
+            },
+            component: () => import('@/views/personal/message.vue')
           }
         ]
       },

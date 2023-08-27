@@ -32,4 +32,12 @@ body {
   height: 100%;
   overflow: hidden;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cursor {
+  cursor: pointer;
+}
 </style>

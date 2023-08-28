@@ -18,7 +18,15 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': 'resolve(__dirname, "src")',
+      '@': resolve(__dirname, './src')
     }
-  }
+  },
+
+  // server: {
+  //   port: 3000,
+  //   history: {
+  //     // 此处配置 history 模式需要
+  //     type: 'html5'
+  //   }
+  // }
 })

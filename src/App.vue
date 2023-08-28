@@ -1,5 +1,5 @@
 <template>
-  <el-config-provider :locale="locale">
+  <el-config-provider :locale="zhCn">
     <router-view></router-view>
   </el-config-provider>
 </template>
@@ -22,6 +22,7 @@ export default defineComponent({
 });
 </script>
 
+
 <style >
 html,
 body {
@@ -30,5 +31,13 @@ body {
 #app {
   height: 100%;
   overflow: hidden;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cursor {
+  cursor: pointer;
 }
 </style>

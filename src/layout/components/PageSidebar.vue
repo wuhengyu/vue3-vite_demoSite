@@ -2,7 +2,7 @@
   <div class="header-cont">
     <div class="left">
       <h1>
-        <router-link to="/">{{ t("sitename") }}</router-link>
+        <router-link to="/">{{ t(`sitename`) }}</router-link>
       </h1>
     </div>
     <div class="right flex-center">
@@ -33,9 +33,9 @@
         </div>
         <template #dropdown>
           <el-dropdown-menu
-            ><el-dropdown-item>{{ t("personalCenter") }} </el-dropdown-item
+            ><el-dropdown-item>{{ t(`personalCenter`) }} </el-dropdown-item
             ><el-dropdown-item>{{
-              t("logout")
+              t(`logout`)
             }}</el-dropdown-item></el-dropdown-menu
           >
         </template>
@@ -43,7 +43,7 @@
     </div>
   </div>
 </template>
-  <script setup>
+<script setup>
 const { locale, t } = useI18n();
 
 // 语言切换45
